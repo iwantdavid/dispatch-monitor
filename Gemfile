@@ -21,6 +21,7 @@ gem 'compass-rails', '~> 2.0.0'
 
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'underscore-rails'
 gem 'elementaljs-rails'
 gem 'ejs'
@@ -44,6 +45,7 @@ gem 'resque-sentry'
 gem 'rest-client'
 gem 'sunspot_rails'
 gem 'sunspot_matchers'
+gem 'rails-jquery-autocomplete'
 
 group :development do
   gem 'better_errors'

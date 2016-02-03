@@ -34,6 +34,10 @@ Rails.application.routes.draw do
   end
 
   resources :sensors, only: [:index, :new, :create, :destroy]
+  resources :sensors do  
+    get :autocomplete_project_deployment_code, :on => :collection
+  end  
+
   resources :vehicles, only: [:index, :new, :create, :edit, :update]
   resources :weekly_logs, only: [:index, :show]
 

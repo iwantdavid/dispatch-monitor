@@ -4,6 +4,6 @@
 
   %section.row{ role: 'main' }
     = simple_form_for @sensor, url: sensors_path do |f|
-      .medium-12.columns= f.input :deployment_code, as: :string, placeholder: 'e.g. ET.GOH.Q4.09.048.123'
+      .medium-12.columns= f.input :deployment_code, as: :autocomplete, url: autocomplete_project_deployment_code_sensors_path, placeholder: 'e.g. ET.GOH.Q4.09.048.123'
       .medium-12.columns= f.input :imei, as: :string, placeholder: 'e.g. 013949004634711'
       .medium-12.columns= f.submit 'Add', class: 'button radius'

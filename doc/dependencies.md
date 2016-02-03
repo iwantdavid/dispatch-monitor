@@ -1,6 +1,6 @@
 # remote_monitoring
 
-As of January 28, 2015  3:50pm. 97 total
+As of January 24, 2016  7:12pm. 97 total
 
 ## Summary
 * 85 MIT
@@ -110,7 +110,7 @@ simple to do.  Currently the following builder objects are supported:
 
 
 <a name="bundler"></a>
-### <a href="http://bundler.io">bundler</a> v1.6.2
+### <a href="http://bundler.io">bundler</a> v1.11.2
 #### The best way to manage your application's dependencies
 
 <a href="http://opensource.org/licenses/mit-license">MIT</a> whitelisted

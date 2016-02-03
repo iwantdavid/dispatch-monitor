@@ -1,4 +1,6 @@
 class SensorsController < AdminController
+  autocomplete :project, :deployment_code, full: true
+
   def index
     @sensors = SensorList.new(FilterForm.new(filter_params))
   end
@@ -41,6 +43,10 @@ class SensorsController < AdminController
   end
 
   private
+
+  def get_autocomplete_items(parameters)
+    items = Project.where('id NOT IN (SELECT DISTINCT(project_id) FROM sensors)')
+  end
 
   def sensor_project_params
     params.require(:sensor_project)

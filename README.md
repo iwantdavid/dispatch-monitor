@@ -7,9 +7,21 @@
 - Ruby 2.1.2
 - Postgres 9.3
 - Redis
+- Solr
 - PhantomJS
 
 ### Instructions
+
+Clone the repository:
+```sh
+clone REPO_URL
+cd REPO_NAME
+```
+
+Install dependencies:
+```sh
+bundle
+```
 
 Copy `config/database.yml.example` to `config/database.yml` and update it to
 match your database.
@@ -33,8 +45,18 @@ WAZI_VERIFY_SSL=true # Set to false in development
 SECRET_KEY_BASE=<your Rails default secret key base>
 ```
 
-To start the app, run:
+Start and initialize Sunspot-Solr:
+```sh
+bundle exec rake sunspot:solr:start
+bundle exec rake sunspot:solr:index
+```
 
+Create, migrate, and seed database:
+```sh
+bundle exec rake db:setup
+```
+
+To start the app, run:
 ```sh
 bundle
 gem install foreman

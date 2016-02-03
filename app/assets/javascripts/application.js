@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require underscore
 //= require foundation
+//= require jquery-ui/autocomplete
+//= require autocomplete-rails
 //= require elemental
 //= require remote_monitoring
 //= require js-routes
